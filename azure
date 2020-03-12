@@ -1,0 +1,29 @@
+#https://docs.microsoft.com/en-us/learn/modules/create-linux-virtual-machine-in-azure/6-exercise-connect-to-a-linux-vm-using-ssh
+
+sudo apt-get install byobu
+curl https://assets.nagios.com/downloads/nagiosxi/install.sh | sh
+dmesg | grep SCSI
+
+(echo n; echo p; echo 1; echo ; echo ; echo w) | sudo fdisk /dev/sdc
+sudo mkfs -t ext4 /dev/sdc1
+sudo mkdir /data & sudo mount /dev/sdc1 /data
+
+
+sudo apt-get update
+sudo apt-get install apache2 -y
+sudo systemctl status apache2 --no-pager
+
+
+
+#mongo
+sudo apt update && sudo apt upgrade -y
+sudo apt-get install -y mongodb
+#checks
+sudo systemctl status mongodb
+mongod --version
+
+#node
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+#check
+node -v
