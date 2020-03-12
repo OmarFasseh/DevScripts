@@ -1,0 +1,6 @@
+
+sudo mkdir -p /data/db
+#sudo chmod -R go+w /data/db
+# or sudo chown -R 'username' /data/db
+
+#used "sudo mongod" instead 
