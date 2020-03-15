@@ -9,6 +9,7 @@ but I tried adding (remembering) the main ones]
 + **Another bash scripting tutorial:** https://www.youtube.com/watch?v=GtovwKDemnI
 + **ssh intro:** https://www.youtube.com/watch?v=qWKK_PNHnnA
 + **ssh crash course with some devops:** https://www.youtube.com/watch?v=hQWRp-FdTpc
++ **Byobu tutorial + Mozart:** https://www.youtube.com/watch?v=hQWRp-FdTpc
 
 # Playlists
 + **Covers TONS of general need to know stuff.** *could be used as a small reference*
