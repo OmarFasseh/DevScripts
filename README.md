@@ -11,7 +11,7 @@ but I tried adding (remembering) the main ones]
 + **ssh crash course with some devops:** https://www.youtube.com/watch?v=hQWRp-FdTpc
 + **Byobu tutorial + Mozart:** https://www.youtube.com/watch?v=hQWRp-FdTpc
 
-# Playlists
+## Playlists
 + **Covers TONS of general need to know stuff.** *could be used as a small reference*
 	https://www.youtube.com/playlist?list=PLT98CRl2KxKHaKA9-4_I38sLzK134p4GJ
 
