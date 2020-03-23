@@ -28,3 +28,9 @@ but I tried adding (remembering) the main ones]
 + https://github.com/meanjs/mean
 + https://github.com/linnovate/mean#hosting-mean
 + https://docs.microsoft.com/en-us/learn/modules/build-a-web-app-with-mean-on-a-linux-vm/
+
+
+
+## Other links
+[How to serve static files](https://nodejs.org/en/knowledge/HTTP/servers/how-to-serve-static-files/)
+[How to create an https server?](https://nodejs.org/en/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/)
