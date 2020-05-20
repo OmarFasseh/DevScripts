@@ -1,0 +1,57 @@
+server {
+	server_name www.totallynotspotify.codes totallynotspotify.codes; 
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		#try_files $uri $uri/ =404;
+	 	
+		#root ~/FrontEndScript/SWE-Frontend-automation/build;
+		#root ~/Front_End_System424/build;
+	 	root ~/FrontEndScript/build;
+		
+	        index index.html;
+	        try_files $uri /index.html;
+	 #                              
+		#proxy_pass http://localhost:3000;
+		
+	}
+	location /api{
+		#root /home/Dev/Front_End_System424/build;
+
+               # index index.html;
+               # try_files $uri /index.html;
+		rewrite ^/api(.*) $1 break;
+		proxy_pass http://localhost:3040/;
+	}
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/totallynotspotify.codes/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/totallynotspotify.codes/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+
+
+server {
+    if ($host = www.totallynotspotify.codes) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = totallynotspotify.codes) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	server_name www.totallynotspotify.codes totallynotspotify.codes;
+    return 404; # managed by Certbot
+
+
+
+
+}
