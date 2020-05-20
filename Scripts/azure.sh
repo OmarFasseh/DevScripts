@@ -48,6 +48,8 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 apt update && apt install yarn
 
+chown -R $USER:$GROUP ~/.npm
+chown -R $USER:$GROUP ~/.config
 
 #netdata monitoring tool
 #sudo -u Dev bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
