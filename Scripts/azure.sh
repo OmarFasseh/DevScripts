@@ -6,9 +6,9 @@ set -e
 #dmesg | grep SCSI
 
 #azure releated
-(echo n; echo p; echo 1; echo ; echo ; echo w) | fdisk /dev/sdc
-mkfs -t ext4 /dev/sdc1
-mkdir /data & mount /dev/sdc1 /data
+#(echo n; echo p; echo 1; echo ; echo ; echo w) | fdisk /dev/sdc
+#mkfs -t ext4 /dev/sdc1
+#mkdir /data & mount /dev/sdc1 /data
 
 
 apt-get update
@@ -26,21 +26,22 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 apt-get update 
 apt-get install -y mongodb-org
 
-sudo systemctl start mongod
+#sudo systemctl start mongod
+#service mongod start
 #checks
 
-sudo systemctl status mongodb
+#systemctl status mongodb
 mongod --version
 
 
-#node.js v13.x
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-apt-get install -y nodejs
+#node.js v14.x
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
 node -v
 
 #installing nginx
 apt update
-apt install nginx
+yes | apt install nginx
 
 #installing yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
@@ -49,7 +50,7 @@ apt update && apt install yarn
 
 
 #netdata monitoring tool
-bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
+#sudo -u Dev bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
 
 #install pm2
 npm install pm2@latest -g
