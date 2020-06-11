@@ -8,8 +8,8 @@ echo " ~~~~~~~~~~~ Installing Requirements... ~~~~~~~~~~~"
 echo " ~~~~~~~~~~~ Chaning Nginx Configs... ~~~~~~~~~~~"
 ./nginxFrontEnd.sh
 echo " ~~~~~~~~~~~ Creating Directories... ~~~~~~~~~~~"
-sudo -u $USER ./directories.sh
+sudo -u Dev ./directories.sh
 
 #just in case the directories were owned by root
-chown -R $USER:$GROUP ~
+chown -R Dev ~
 printf "Done.\nPlease start mongod in byobu\n"

@@ -23,7 +23,7 @@ apt-get update
 apt-get install -y mongodb-org
 
 mkdir -p /data/db
-chown -R $USER /data/db
+chown -R Dev /data/db
 
 #sudo systemctl start mongod 
 #service mongod start

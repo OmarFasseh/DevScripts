@@ -28,7 +28,7 @@ apt-get install -y mongodb-org
 #mongod --version
 
 #node 8
-#sudo -u $USER curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - #doesn't need sudo
+#sudo -u Dev curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - #doesn't need sudo
 #apt-get install -y nodejs
 #check
 #node -v
