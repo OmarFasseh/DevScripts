@@ -8,5 +8,5 @@ echo " ~~~~~~~~~~~ Installing Requirements... ~~~~~~~~~~~"
 echo " ~~~~~~~~~~~ Chaning Nginx Configs... ~~~~~~~~~~~"
 ./nginxFrontEnd.sh
 echo " ~~~~~~~~~~~ Creating Directories... ~~~~~~~~~~~"
-sudo -u Dev ./directories.sh
+sudo -u $USER ./directories.sh
 printf "Done.\nPlease start mongod in byobu\n"

@@ -44,8 +44,8 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 apt update && apt install yarn
 
-chown -R $USER:$GROUP ~/.npm
-chown -R $USER:$GROUP ~/.config
+#chown -R $USER:$GROUP ~/.npm
+#chown -R $USER:$GROUP ~/.config
 
 #install pm2
 npm install pm2@latest -g
@@ -54,7 +54,7 @@ npm install pm2@latest -g
 #extras
 
 #netdata monitoring tool
-#sudo -u Dev bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
+#sudo -u $USER bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
 
 #serve
 #sudo snap install serve
