@@ -22,7 +22,10 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 apt-get update 
 apt-get install -y mongodb-org
 
-#sudo systemctl start mongod -> replaced by starting mongod in byobu
+mkdir -p /data/db
+chown -R $USER /data/db
+
+#sudo systemctl start mongod 
 #service mongod start
 #checks
 
@@ -44,8 +47,6 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 apt update && apt install yarn
 
-#chown -R $USER:$GROUP ~/.npm
-#chown -R $USER:$GROUP ~/.config
 
 #install pm2
 npm install pm2@latest -g
