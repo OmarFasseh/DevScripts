@@ -3,6 +3,6 @@ set -e
 
 cd  Scripts
 echo " ~~~~~~~~~~~ Starting Backend... ~~~~~~~~~~~"
-sudo -u Dev ./pm2BackEnd.sh
+./pm2BackEnd.sh || { printf "Starting Backend failed!\nMake sure to run init.sh as root first\n" ; exit 1; }
 echo " ~~~~~~~~~~~ Starting Frontend... ~~~~~~~~~~~"
-sudo -u Dev ./reloadFront.sh
+./reloadFront.sh || { echo "Starting Frontend failed!" ; }
