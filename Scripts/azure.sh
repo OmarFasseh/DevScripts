@@ -1,10 +1,6 @@
 #!/bin/sh
 set -e
 
-#nagios installation needs more research
-#curl https://assets.nagios.com/downloads/nagiosxi/install.sh | sh
-#dmesg | grep SCSI
-
 #azure releated
 #(echo n; echo p; echo 1; echo ; echo ; echo w) | fdisk /dev/sdc
 #mkfs -t ext4 /dev/sdc1
@@ -26,7 +22,7 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 apt-get update 
 apt-get install -y mongodb-org
 
-#sudo systemctl start mongod
+#sudo systemctl start mongod -> replaced by starting mongod in byobu
 #service mongod start
 #checks
 
@@ -51,11 +47,14 @@ apt update && apt install yarn
 chown -R $USER:$GROUP ~/.npm
 chown -R $USER:$GROUP ~/.config
 
-#netdata monitoring tool
-#sudo -u Dev bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
-
 #install pm2
 npm install pm2@latest -g
+
+
+#extras
+
+#netdata monitoring tool
+#sudo -u Dev bash <(curl -Ss https://my-netdata.io/kickstart.sh)  --stable-channel --disable-telemetry
 
 #serve
 #sudo snap install serve
